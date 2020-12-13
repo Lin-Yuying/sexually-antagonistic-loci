@@ -11,4 +11,4 @@ cat pop.snp.*.fst | grep -v CHROM > pop.snp.total.fst
 cat pop.snp.*.fst | grep "CHROM"|uniq > header.txt
 cat header.txt pop.snp.total.fst > pop.snp.fst
 python3 ./fst2csv.py pop.snp.fst pop.snp.sorted.fst 
-python3 ./cal_pvalues.py -in_fst pop.snp.sorted.fst -out pop.pvalue
+python3 ./cal_pvalues_lin.py -in_fst pop.snp.sorted.fst -out pop.pvalue
